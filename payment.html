@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--========================================================
+                our footer section
+     =========================================================== -->
+    <div class="logo-img">
+        <img src="img/logo.png" alt="">
+        <p>U-HUB</p>
+    </div>
+    <div class="container-payment">
+        <div class="order-summary">
+            <h1>Order Summary</h1>
+            <div class="order-item">
+                <span>Long Jacket</span>
+                <span>$65.00</span>
+            </div>
+            <div class="order-item">
+                <span>Long Jacket</span>
+                <span>$95.00</span>
+            </div>
+            <div class="order-item">
+                <span>Long Jacket</span>
+                <span>$95.00</span>
+            </div>
+            <div class="totals">
+                <p><span>Subtotal</span><span>$160.00</span></p>
+                <p><span>Sales tax (6.5%)</span><span>$4.23</span></p>
+                <p><span>Shipping Fee</span><span>FREE</span></p>
+                <p><span>Total due</span><span>$164.23</span></p>
+            </div>
+        </div>
+        <div class="payment-methods">
+            <h2>Payment Methods</h2>
+            <label>
+                <input type="radio" name="payment" checked>
+                Pay on Delivery
+            </label>
+            <label>
+                <input type="radio" name="payment">
+                Credit/Debit Cards
+            </label>
+            <!-- <a href="#" class="pay-button">Pay $164.23</a> -->
+            <div class="pay-button" onclick="showPopup()">Pay $164.23</div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>Payment Successful</h3>
+            <button onclick="hidePopup()">OK</button>
+        </div>
+    </div>
+
+    <!--========================================================
+                our footer section
+     =========================================================== -->
+    <footer class="footer">
+        <div class="address">
+            <img src="img/logo.png" alt="logo">
+            <p>Kumaripati, Lalitpur</p>
+        </div>
+        <div class="links">
+            <h4>Links</h4>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="help">
+            <h4>Help</h4>
+            <a href="#">Payment Options</a>
+            <a href="#">Returns</a>
+            <a href="#">Privacy Policies</a>
+        </div>
+        <div class="newsletter">
+            <h4>Newsletter</h4>
+            <form action="#">
+                <input type="email" placeholder="Enter Your Email Address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
+    <script>
+
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
